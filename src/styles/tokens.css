@@ -1,0 +1,89 @@
+/* ==========================================================================
+   NANDLAL JEWELLERS — DESIGN SYSTEM TOKENS (RGB channels for Tailwind alpha)
+   ========================================================================== */
+
+:root {
+  /* Space-separated RGB channels (required for Tailwind /opacity modifiers) */
+  --nj-obsidian-rgb: 12 11 10;
+  --nj-charcoal-rgb: 22 20 18;
+  --nj-graphite-rgb: 34 31 28;
+  --nj-ivory-rgb: 245 242 235;
+  --nj-cream-rgb: 236 230 218;
+  --nj-mist-rgb: 229 225 216;
+  --nj-champagne-rgb: 200 168 107;
+  --nj-antique-gold-rgb: 138 107 50;
+  --nj-bronze-rgb: 102 82 50;
+
+  /* Core Hex Tokens */
+  --nj-obsidian: #0c0b0a;
+  --nj-charcoal: #161412;
+  --nj-graphite: #221f1c;
+  --nj-ivory: #f5f2eb;
+  --nj-cream: #ece6da;
+  --nj-mist: #e5e1d8;
+  --nj-cloud: #d8d3c9;
+  --nj-champagne: #c8a86b;
+  --nj-antique-gold: #8a6b32;
+  --nj-bronze: #665232;
+
+  /* Semantic Hero Theme — Light Misty Champagne-Ivory (Default) */
+  --hero-bg-top: #e8e5de;
+  --hero-bg-mid: #f5f2eb;
+  --hero-bg-bottom: #e7e1d4;
+  --hero-ink: #161412;
+  --hero-ink-muted: #554f46;
+  --hero-chip-bg: rgba(138, 107, 50, 0.1);
+  --hero-chip-border: rgba(138, 107, 50, 0.28);
+  --hero-chip-text: #6b5224;
+  --hero-nav-pill-bg: #161412;
+  --hero-nav-pill-ink: #f5f2eb;
+  --hero-hairline: rgba(22, 20, 18, 0.14);
+  --hero-hotspot-bg: rgba(245, 242, 235, 0.92);
+
+  /* Motion */
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 240ms;
+  --dur-mid: 500ms;
+  --dur-slow: 760ms;
+}
+
+[data-hero-theme="dark"] {
+  --hero-bg-top: #0b0a09;
+  --hero-bg-mid: #14120f;
+  --hero-bg-bottom: #0c0b0a;
+  --hero-ink: #f5f2eb;
+  --hero-ink-muted: #aba294;
+  --hero-chip-bg: rgba(200, 168, 107, 0.14);
+  --hero-chip-border: rgba(200, 168, 107, 0.36);
+  --hero-chip-text: #d7be88;
+  --hero-nav-pill-bg: #f5f2eb;
+  --hero-nav-pill-ink: #0c0b0a;
+  --hero-hairline: rgba(245, 242, 235, 0.18);
+  --hero-hotspot-bg: rgba(18, 16, 14, 0.9);
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
